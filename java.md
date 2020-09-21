@@ -67,6 +67,8 @@ in the right order.
 |Multiply    |\*          |2 \* 3 = 6                                        |
 |Division    |/           |6 / 2 = 3 and 6 / 4 = 1 (!) but 6 / 4.0 = 1.5     |
 |Modulus     |%           |6 % 2 = 0 and 6 % 4 = 2                           |
+|Add 1       |++          |int a = 1; a++; a is now 2                        |
+|Subtract 1  |--          |int a = 2; a--; a is now 1                        |
 
 Note here that in the division example, if you divide with an integer it does
 not return the remainder of the division, but only the whole number. If you
@@ -82,6 +84,47 @@ instead of the classical one value only. All have the same datatype, and you
 can have arrays of any datatype you like - but again, you cannot mix!
 
 You write the initialization in the same way as you would with a normal
-variable, with the exception that you have to use brackets ([])
+variable, with the exception that you have to use brackets ([]).
+
+*Remember that arrays always have the first position as 0!* Therefore you
+always have the last position as "length - 1"
+
+```java
+// Initialize with values
+int[] my_test = {1, 4, 7};
+String[] names = {"Kim", "Feriba", "Mila", "Jonas"};
+
+// Initialize with a given size and default empty values
+int[] my_test = int[3];
+String[] names = String[4];
+```
+
+When you have initialized an array, you can modify the individual elements,
+but you have to do it via an index. Think of the index as the help to Java
+to figure out which drawer it should find the shoe.
+
+```java
+// Initialize with values
+int[] my_test = {1, 4, 7};
+my_test[0] = 2; // was 1 before, but now it is 2
+my_test[0]++; // was 2 and now is 3
+
+String[] names = {"Kim", "Feriba", "Mila", "Jonas"};
+names[4] = "test"; // will fail, because the index of the fourth position is 3!
+```
+
+Just remember, think of it as a set of drawers, where you can take things
+out and put them back, but you have to tell Java which drawer to work with.
 
 *[table of contents](#table-of-contents)*
+
+## Control structures
+
+We have a set of control structures to help us make the programs more
+adaptable to our needs, instead of doing the same thing again and again
+and again - just very fast. These are in two forms - if/else and loops (for
+and while loops).
+
+###
+
+
