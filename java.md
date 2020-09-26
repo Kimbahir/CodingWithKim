@@ -271,10 +271,57 @@ spend eternity with the first student :)
 
 ## User interactions
 
-We have many ways of interacting 
+We have many ways of interacting with the user - here are some of the most
+common when you are learning how to code.
 
+### Taking arguments
 
-  - [Taking arguments](#taking-arguments)
-  - [Printing to screen](#printing-to-screen)
+When we run a command line argument we can parse along arguments to the program.
+These are always considered strings and come in form of an array of String, that
+will have the length of the amount of arguments passed along.
 
+An argument is different than in rhetoric - it is can be compared to a
+parameter - something that you pass along with the program itself. A classic
+example could be:
 
+```bash
+java myProgram parameter1 123
+```
+
+In this example you ask java to run the file **myProgram.class** with two
+arguments *parameter1* and *123*. Notice, that even as you implicitly
+understand that *parameter1* is a string and that *123* is an int, but for
+java both are a string, and you as a programmer have to convert it to an int
+if you need so (and you often do).
+
+Inside java, the way you can receive this, we have the following example:
+
+```java
+public class myProgram {
+    public static void main(String[] argv) {
+        String param1 = argv[0]; // we maintain it as a string
+        int param2 = int.parseInt(argv[1]); // we convert to int
+    }
+}
+```
+
+*[table of contents](#table-of-contents)*
+
+### Printing to screen
+
+We often need to output to the screen - if nothing else, then just to see
+what the result of our program was. There is two classical ways of doing
+this, which are essentially the same, except one of them adds a linechange
+and the other doesn't.
+
+```java
+String firstName = 'Feriba';
+String lastName = 'Bahir Andersen';
+System.out.println(firstName);
+System.out.print(lastName);
+```
+
+The method println adds a linechange, and print doesn't, and in some
+exercises does make a difference.
+
+*[table of contents](#table-of-contents)*
