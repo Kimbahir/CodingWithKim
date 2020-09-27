@@ -156,10 +156,22 @@ to figure out which drawer it should find the shoe.
 int[] my_test = {1, 4, 7};
 my_test[0] = 2; // was 1 before, but now it is 2
 my_test[0]++; // was 2 and now is 3
+```
 
+|Index    |0        |1        |2        |
+|---------|   :-:   |  :-:    |   :-:   |
+|Value    | 3       | 4       | 7       |
+
+```java
 String[] names = {"Kim", "Feriba", "Mila", "Jonas"};
 names[4] = "test"; // will fail, because the index of the fourth position is 3!
 ```
+
+This array would looke like this (ignoring the assignment that will fail):
+
+|Index    |0        |1        |2        |3        |
+|---------|   :-:   |  :-:    |   :-:   |   :-:   |
+|Value    |"Kim"    |"Feriba" |"Mila"   |"Jonas"  |
 
 Just remember, think of it as a set of drawers, where you can take things
 out and put them back, but you have to tell Java which drawer to work with.
